@@ -1,0 +1,6 @@
+:host{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 16px 32px;
+  }

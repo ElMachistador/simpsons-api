@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 
-interface Quote {
+export interface Quote {
   quote: string,
   character: string,
   image: string,
@@ -15,9 +15,12 @@ interface Quote {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+
 export class AppComponent {
   title = 'quotes';
   quotes?: Observable<Quote[]>;
+  
 
   constructor(
     private http: HttpClient

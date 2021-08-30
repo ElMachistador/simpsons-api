@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Quote } from '../app.component';
+
+
 
 @Component({
   selector: 'app-quotes',
@@ -6,6 +10,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./quotes.component.scss']
 })
 export class QuotesComponent {
-
-
+    @Input() myQuotes?: Observable<Quote[]>;
 }
