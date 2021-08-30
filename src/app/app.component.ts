@@ -20,7 +20,7 @@ export interface Quote {
 export class AppComponent {
   title = 'quotes';
   quotes?: Observable<Quote[]>;
-  
+
 
   constructor(
     private http: HttpClient
