@@ -1,5 +1,4 @@
 import { Component,Input } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Quote } from '../app.component';
 
 
@@ -10,5 +9,5 @@ import { Quote } from '../app.component';
   styleUrls: ['./quotes.component.scss']
 })
 export class QuotesComponent {
-    @Input() myQuotes?: Observable<Quote[]>;
+    @Input() myQuotes?: Quote[] | null
 }

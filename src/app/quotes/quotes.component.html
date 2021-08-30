@@ -1,18 +1,18 @@
-<mat-card *ngFor="let simpson of (myQuotes | async)">
-    <mat-card-header>
-      <mat-card-title>
-        {{simpson.character}}
-      </mat-card-title>
-    </mat-card-header>
-    <img mat-card-image [src]="simpson.image" alt="Image of a simpson">
-    <mat-card-content>
-      <p>
-        <em>
-          "{{simpson.quote}}" 
-        </em>
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary">Voir plus</button>
-    </mat-card-actions>
-  </mat-card>
+<mat-card *ngFor="let simpson of myQuotes">
+  <mat-card-header>
+    <mat-card-title>
+      {{simpson.character}}
+    </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="simpson.image" alt="Image of a simpson">
+  <mat-card-content>
+    <p>
+      <em>
+        "{{simpson.quote | maxlength:75 }}"
+      </em>
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">Voir plus</button>
+  </mat-card-actions>
+</mat-card>

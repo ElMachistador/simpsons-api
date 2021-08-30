@@ -9,13 +9,15 @@ import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import { QuotesComponent } from './quotes/quotes.component';
+import { MaxlengthPipe } from './pipes';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuotesComponent
+    QuotesComponent,
+    MaxlengthPipe
   ],
   imports: [
     BrowserModule,
