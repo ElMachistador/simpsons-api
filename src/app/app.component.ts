@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { QuotesService } from './quotes.service';
+import { QuotesService, Quote } from './quotes.service';
 
 
 @Component({
@@ -7,17 +7,16 @@ import { QuotesService } from './quotes.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-
-
 export class AppComponent {
   title = 'quotes';
-  quotes = this.service.quotes;
+  quotes?: Quote[];
   constructor(
     private service: QuotesService
   ) {
   }
-  getQuotes() {
-    this.service.loadQuotes();
+  async getQuotes() {
+    await this.service.loadQuotes();
+    this.quotes = this.service.quotes
   }
 }
 
