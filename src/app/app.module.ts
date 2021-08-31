@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import { QuotesComponent } from './quotes/quotes.component';
 import { MaxlengthPipe } from './pipes';
+import { QuotesDetailsComponent } from './quotes-details/quotes-details.component';
 
 
 
@@ -17,7 +18,8 @@ import { MaxlengthPipe } from './pipes';
   declarations: [
     QuotesComponent,
     MaxlengthPipe,
-    AppComponent
+    AppComponent,
+    QuotesDetailsComponent
   ],
   imports: [
     BrowserModule,
