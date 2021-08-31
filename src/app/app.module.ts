@@ -17,7 +17,7 @@ import { MaxlengthPipe } from './pipes';
   declarations: [
     AppComponent,
     QuotesComponent,
-    MaxlengthPipe
+    MaxlengthPipe,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +26,7 @@ import { MaxlengthPipe } from './pipes';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    MatGridListModule
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
