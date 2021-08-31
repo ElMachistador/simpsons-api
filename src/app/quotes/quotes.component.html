@@ -1,4 +1,4 @@
-<mat-card *ngFor="let simpson of myQuotes">
+<mat-card *ngFor="let simpson of myQuotes; let i=index">
   <mat-card-header>
     <mat-card-title>
       {{simpson.character}}
@@ -13,6 +13,6 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary">Voir plus</button>
+    <a mat-raised-button color="primary" [routerLink]="['details',i]" >Voir plus</a>
   </mat-card-actions>
 </mat-card>

@@ -1,6 +1,7 @@
-import { Component, Input} from '@angular/core';
-import { QuotesService } from '../quotes.service';
-import { Quote } from '../quotes.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { Quote, QuotesService } from '../quotes.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 
 
@@ -9,9 +10,20 @@ import { Quote } from '../quotes.service';
   templateUrl: './quotes-details.component.html',
   styleUrls: ['./quotes-details.component.scss']
 })
-export class QuotesDetailsComponent {
-  @Input() myQuotes?: Quote[] | null
+export class QuotesDetailsComponent implements OnInit {
+  quote: Quote | undefined
+  index?: number
   constructor(
-    private service : QuotesService,
-  ){}
+    private route: ActivatedRoute,
+    private service: QuotesService
+  ) { }
+
+  ngOnInit() {
+    const routeParams = this.route.snapshot.paramMap;
+    this.index = Number(routeParams.get('index'));
+    if (this.service.quotes) {
+      this.quote = this.service.quotes[this.index]
+    }
+  }
+
 }

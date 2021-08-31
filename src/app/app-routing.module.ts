@@ -4,7 +4,7 @@ import { QuotesDetailsComponent } from './quotes-details/quotes-details.componen
 
 
 const routes: Routes = [
-  { path: '', component: QuotesDetailsComponent },
+  { path: 'details/:index', component: QuotesDetailsComponent },
 ];
 
 @NgModule({
