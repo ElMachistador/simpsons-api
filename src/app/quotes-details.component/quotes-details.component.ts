@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { QuotesService } from "../quotes-service";
+import { QuotesService } from "../quotes.service";
 
 
 @Component({

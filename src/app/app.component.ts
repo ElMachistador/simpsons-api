@@ -1,14 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { QuotesService } from './quotes.service';
 
-
-export interface Quote {
-  quote: string,
-  character: string,
-  image: string,
-  characterDirection: "Left" | "Right"
-}
 
 @Component({
   selector: 'app-root',
@@ -19,17 +11,13 @@ export interface Quote {
 
 export class AppComponent {
   title = 'quotes';
-  quotes?: Observable<Quote[]>;
-
-
+  quotes = this.service.quotes;
   constructor(
-    private http: HttpClient
+    private service: QuotesService
   ) {
-
   }
-
   getQuotes() {
-    this.quotes = this.http.get<Quote[]>('https://thesimpsonsquoteapi.glitch.me/quotes?count=10');
+    this.service.loadQuotes();
   }
-
 }
+

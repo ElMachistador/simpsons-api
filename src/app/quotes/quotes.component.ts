@@ -1,5 +1,6 @@
 import { Component,Input } from '@angular/core';
-import { Quote } from '../app.component';
+import { Quote } from '../quotes.service';
+import { QuotesService } from '../quotes.service';
 
 
 

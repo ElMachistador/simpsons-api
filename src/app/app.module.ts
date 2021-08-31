@@ -15,9 +15,9 @@ import { MaxlengthPipe } from './pipes';
 
 @NgModule({
   declarations: [
-    AppComponent,
     QuotesComponent,
     MaxlengthPipe,
+    AppComponent
   ],
   imports: [
     BrowserModule,
